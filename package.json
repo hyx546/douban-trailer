@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/hyx546/douban-trailer#readme",
   "dependencies": {
-    "koa": "^2.11.0"
+    "ejs": "^3.0.2",
+    "koa": "^2.11.0",
+    "pug": "^2.0.4"
   }
 }
