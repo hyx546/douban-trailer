@@ -12,19 +12,19 @@ console.log('e');
   console.log('Start visit the target page');
 
   const browser = await puppeteer.launch({
-    args: ['--no-sandbox'],
+    args: ['--no-sandbox'], // 启动xx模式
     dumpio:false
 })
-  const page = await browser.newPage()
+  const page = await browser.newPage() //开启一个新页面
   await page.goto(url, {
     waitUntil: 'networkidle2' //空闲就加载完毕
-  })
+  }) // 进入列表页面
 
   await sleep(3000)
 
-  await page.waitForSelector('.more')
+  await page.waitForSelector('.more') //加载更多按钮元素
 
-  for (let i =0 ; i<1; i++){
+  for (let i =0 ; i<2; i++){
     await sleep(3000)
     await page.click('.more')
   }
@@ -54,5 +54,7 @@ console.log('e');
   })
   browser.close()
 
-  console.log(result);
+  // console.log(result);
+  process.send({result})
+  process.exit(0);
 })()
