@@ -22,8 +22,10 @@
   },
   "homepage": "https://github.com/hyx546/douban-trailer#readme",
   "dependencies": {
+    "@types/puppeteer": "^2.0.1",
     "ejs": "^3.0.2",
     "koa": "^2.11.0",
-    "pug": "^2.0.4"
+    "pug": "^2.0.4",
+    "puppeteer": "^2.1.1"
   }
 }
